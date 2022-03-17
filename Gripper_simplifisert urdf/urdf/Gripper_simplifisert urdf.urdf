@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Gripper_simplifisert urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0163837503871505 0.0378865186676993 0.00494444132357527"
+        rpy="0 0 0" />
+      <mass
+        value="0.000503751907276557" />
+      <inertia
+        ixx="8.0850828741336E-09"
+        ixy="-6.54161654931106E-25"
+        ixz="6.55919809757801E-25"
+        iyy="7.67532930677441E-09"
+        iyz="-6.43272421121329E-26"
+        izz="4.04088266304532E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_simplifisert urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_simplifisert urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="gripper_right">
+    <inertial>
+      <origin
+        xyz="0.00315 0.00214433187807551 0.00474744348815529"
+        rpy="0 0 0" />
+      <mass
+        value="0.000188432917352885" />
+      <inertia
+        ixx="2.30415574057775E-09"
+        ixy="-2.71325753374622E-26"
+        ixz="2.21748409667114E-26"
+        iyy="2.19728201258166E-09"
+        iyz="3.41171445220796E-11"
+        izz="1.17182721001809E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_simplifisert urdf/meshes/gripper_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_simplifisert urdf/meshes/gripper_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_right"
+    type="prismatic">
+    <origin
+      xyz="0.013234 -0.0069935 0.030037"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gripper_right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.0018"
+      upper="0.0046"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_left">
+    <inertial>
+      <origin
+        xyz="0.00315 -0.00505566812192448 0.00474744348815529"
+        rpy="0 0 0" />
+      <mass
+        value="0.000188432917352885" />
+      <inertia
+        ixx="2.30415574057776E-09"
+        ixy="1.63898564825673E-25"
+        ixz="5.01821890112396E-25"
+        iyy="2.19728201258166E-09"
+        iyz="3.411714452208E-11"
+        izz="1.17182721001809E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_simplifisert urdf/meshes/gripper_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_simplifisert urdf/meshes/gripper_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_left"
+    type="prismatic">
+    <origin
+      xyz="0.019534 -0.0069935 0.038537"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="gripper_left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.0018"
+      upper="0.0046"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
